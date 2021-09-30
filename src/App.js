@@ -16,25 +16,25 @@ function App() {
     })
   }
 
-  const deleteNote = ({ id }) => {
-    setNotes((prevNotes) => {
+  const deleteNote = (id) => {
+    setNotes((prevNotes) => (
       prevNotes.filter((currnote, index) => {
         return index !== id
       })
-    })
+    ))
   }
 
   return (
     <>
       <Header />
       <CreateNote passNote={addNote} />
-      <div className='cards'>
+      {notes.length !== 0 && <div className='cards'>
         {
           notes.map((val, index) => {
             return <Cards key={index} id={index} title={val.title} content={val.content} del={deleteNote} />
           })
         }
-      </div>
+      </div>}
       <Footer />
     </>
   );

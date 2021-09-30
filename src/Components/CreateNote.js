@@ -21,17 +21,22 @@ const CreateNote = (props) => {
     }
 
     const addEvent = () => {
+        if (note.title === '' && note.content === '') {
+            alert("Please write something first")
+        }
+        else {
+            props.passNote(note)
 
-        props.passNote(note)
+            setNote((prevNote) => {
+                return (
+                    {
+                        title: '',
+                        content: ''
+                    }
+                )
+            })
+        }
 
-        setNote((prevNote) => {
-            return (
-                {
-                    title: '',
-                    content: ''
-                }
-            )
-        })
     }
 
     return (

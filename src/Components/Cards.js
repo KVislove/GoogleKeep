@@ -1,18 +1,21 @@
 import React from 'react'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 
-const Cards = ({ key, id, title, content, del }) => {
+const Cards = (props) => {
+
 
     const deleteEvent = () => {
-        del(id)
+        props.del(props.id)
     }
 
     return (
         <>
-            <div className='card' key={key} id={id}>
-                <h1>{title}</h1>
+            <div className='card' key={props.id} id={props.id}>
+                <h1 style={{ marginLeft: '10px', marginBottom: '0px', height: '36px' }}>{props.title}</h1>
                 <br />
-                <p>{content}</p><br />
+                <div style={{ overflow: 'auto', height: "96px" }}>
+                    <p style={{ marginLeft: '10px', marginTop: '0px' }}>{props.content}</p><br />
+                </div>
                 <DeleteOutlineIcon className='delete' onClick={deleteEvent} />
             </div>
         </>
