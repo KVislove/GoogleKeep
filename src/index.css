@@ -10,6 +10,7 @@ code {
   top:0px;
   background-color: yellow;
   width:100%;
+  z-index: 1;
 }
 .footer{
   position : fixed;
@@ -59,7 +60,7 @@ code {
   margin-left: 10px;
   margin-right: 10px;
   overflow-y: scroll;
-  height:380px;
+  height:380px;padding-bottom: 50px;
 }
 .card{
   display:flex;
