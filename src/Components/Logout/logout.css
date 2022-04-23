@@ -1,0 +1,25 @@
+.dropdown{
+   background-color: transparent;
+   border:none;
+   cursor:pointer;
+  padding-right: 30px;
+  font-weight:bold;
+  font-size:1.17em;
+}
+.arrow{
+    margin-top: 3px;
+}
+.menu{
+    font-weight: bold;
+}
+.logout-option{
+    color:black;
+    background-color: #ccff90;
+}
+.logout-option:hover{
+    color:black;
+    background-color: #ccff90;
+}
+.circle-icon{
+    margin-top:7px;
+}
