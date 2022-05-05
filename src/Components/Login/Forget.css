@@ -1,0 +1,18 @@
+.forgetpassword{
+    height: 35%;
+    width: 20%;
+    
+    margin: 15% 0% 0% 25%;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.fp{
+    justify-content: space-between;
+    display:flex;
+    flex-direction: column;
+}
+input[type=email]:focus {
+    border: 3px solid #2196f3;
+    width: 100%;
+  }

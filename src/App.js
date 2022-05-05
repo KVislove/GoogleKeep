@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Login from './Components/Login/Login';
-import Logout from './Components/Logout/Logout';
+import Signup from './Components/Signup/Signup';
+
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/GoogleKeep' element={<Login/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/Signup' element={<Signup/>}/>
       </Routes>
     </>
   );

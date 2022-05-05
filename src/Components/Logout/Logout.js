@@ -6,6 +6,7 @@ import { KvLocalStorage } from "../../Utils/KvLocalStorage";
 import "./logout.css"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
+
 const Logout=(props)=>{
     const options=[{ value: 'logout', label: 'logout', className: 'logout-option' },];
     const navigate= useNavigate()
@@ -17,7 +18,9 @@ const Logout=(props)=>{
         <>
             <div style={{display:"flex", flexDirection:"row"}}>
             <AccountCircleIcon className="circle-icon"/>
-            <ReactDropdown controlClassName="dropdown" menuClassName="menu" arrowClassName="arrow" options={options} value={props.username.toUpperCase()} onChange={()=>logout()}/>  
+            <ReactDropdown controlClassName="dropdown" menuClassName="menu" 
+            arrowClassName="arrow" options={options} 
+            value={props.username.toUpperCase()} onChange={()=>logout()}/>  
             </div>
         </>
     )

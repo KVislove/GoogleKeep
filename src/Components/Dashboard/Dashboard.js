@@ -45,7 +45,9 @@ const Dashboard=()=>{
 
   return (
     <>
+      <div className='full_dash'>
       <Header />
+      
       <CreateNote passNote={addNote} />
       {notes.length !== 0 && <div className='cards'>
         {
@@ -55,6 +57,7 @@ const Dashboard=()=>{
         }
       </div>}
       <Footer />
+      </div>
     </>
   );
 }

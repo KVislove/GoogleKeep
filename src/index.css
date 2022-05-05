@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://media.istockphoto.com/photos/round-podium-or-pedestal-with-green-backgound-picture-id1299157256?b=1&k=20&m=1299157256&s=170667a&w=0&h=K1_5faLgJFynzHgBRyHrPKJCL24k9Oy_2-NFadPVjiw=");
+  background-image: url("https://cdn.wallpapersafari.com/49/77/dq6baA.jpg");
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -54,6 +54,7 @@ code {
   font-weight: bold;
   height: 40px;
   background: transparent;
+  
 }
 .btn{
   border:none;
@@ -74,7 +75,9 @@ code {
   margin-left: 10px;
   margin-right: 10px;
   overflow-y: scroll;
-  height:380px;padding-bottom: 50px;
+  height:380px;
+  padding-bottom: 50px;
+  
 }
 .card{
   display:flex;
@@ -84,6 +87,7 @@ code {
   transition: 0.3s;
   width: 290px;
   height:220px;
+  
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -93,5 +97,20 @@ code {
   cursor: pointer;
   justify-content: center;
   margin-left:250px;
-  margin-top:13px;
+  
+  
+}
+.edit{
+  background-color: yellow;
+  cursor: pointer;
+  justify-content: center;
+  margin-left:210px;
+  
+  
+}
+.full_dash{
+  background-image: url("https://media.istockphoto.com/photos/round-podium-or-pedestal-with-green-background-picture-id1337639487?b=1&k=20&m=1337639487&s=170667a&w=0&h=mKhwSI2_lCAm5XX9pV8Mdp9SSeIp-PXLzxA8j34mHIE=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 91%;
 }

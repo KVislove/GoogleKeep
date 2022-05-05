@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <>
             <div className='header'>
-                <h3> @KV Keep </h3>
+                <h3> @GOOGLE KEEP </h3>
                 <div className="logout-div"><Logout username={username}/></div>
                 
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
 const Cards = (props) => {
 
 
@@ -16,6 +16,7 @@ const Cards = (props) => {
                 <div style={{ overflow: 'auto', height: "96px" }}>
                     <p style={{ marginLeft: '10px', marginTop: '0px' }}>{props.content}</p><br />
                 </div>
+                <ModeEditIcon className='edit' onClick={{}}/>
                 <DeleteOutlineIcon className='delete' onClick={deleteEvent} />
             </div>
         </>

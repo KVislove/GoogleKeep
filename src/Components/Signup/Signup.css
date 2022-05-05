@@ -1,0 +1,67 @@
+.Signup{
+    height: 50%;
+    width: 35%;
+    display:flex;
+    flex-direction: column;
+    margin: 8% 30%;;
+    padding:10px;
+    offset: 25%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px ;
+    
+    background-image: url("https://cdn.wallpapersafari.com/18/99/NVfIJi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+input[type=text]{
+    border-bottom: 2px solid #004d40;
+    box-sizing: border-box;
+    
+    
+}
+
+input[type=password]{
+    border-bottom: 2px solid #004d40 ;
+    box-sizing: border-box;
+}
+input[type=email]{
+    border-bottom: 2px solid #004d40;
+    box-sizing: border-box;
+    padding: 12px;
+    outline:none;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   margin:10px 0px;
+}
+
+.registation{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+}
+input[type=text]:focus {
+    border: 3px solid #2196f3;
+  }
+
+  input[type=email]:focus {
+    border: 3px solid #2196f3;
+  }
+
+  input[type=password]:focus {
+    border: 3px solid #2196f3;
+  }
+  
+  ::placeholder {
+    color: #e65100;
+  }
+  .sig{
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-left: 12px;
+    text-shadow: 2px 2px 8px #00f7ff;
+    color: #e66000;
+  }
