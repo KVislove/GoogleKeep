@@ -16,7 +16,7 @@
     
 }
 .forgot-password{
-    margin:10px 0px;
+    margin:10px auto;
     text-align: center;
     color: #1877f2;;
 }
@@ -42,4 +42,7 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow:  5px 5px 10px blue;;
     color: rgb(127, 255, 191);
+}
+.create-account-link{
+    text-decoration: none !important;
 }

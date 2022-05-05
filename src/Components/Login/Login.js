@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 import Tooltip from '@mui/material/Tooltip';
 import Modal from "react-modal/lib/components/Modal";
 import CloseIcon from '@mui/icons-material/Close';
+import Snackbar from '@mui/material/Snackbar';
 import "./Forget.css";
+import { Alert } from "@mui/material";
 
 Modal.setAppElement("#root")
 const Login=()=>{
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
-
+    const [snackBar, setSnackbar] = useState({message:"", type:""})
     const navigate=useNavigate();
     const[loginData, setLoginData]=useState({username:"", password:""})
     const changeHandler=(event)=>{
@@ -24,17 +26,17 @@ const Login=()=>{
         })
     }
 
+    const handleClose=()=>{
+        setSnackbar({message: "", type:""})
+    }
+
     const login=()=>{
         Service.login(loginData).then(res=>{
-            console.log(res)
-            if(res.data.userId){
+            console.log(res.status)
                 window.localStorage.setItem("userInfo",JSON.stringify(res.data));
                 navigate('/dashboard')
-            }
-            else
-            alert("invalid user")
         }).catch(err=>{
-            console.log(err)
+           setSnackbar({message: err.response.data.message, type:"error"})
         })
     }
     return(
@@ -62,11 +64,13 @@ const Login=()=>{
                 </div>
                 <Link to="" className="forgot-password" onClick={()=> setModalIsOpen(true)}>Forgotten password?</Link>
                 <hr/>
-                <Link to="/Signup">
+                <Link to="/Signup" className="create-account-link">
                 <Button className="create-account" variant="contained">Create Account</Button>
                 </Link>
         </div>
-        
+        {snackBar.message && <Snackbar open={true} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{vertical:"top",horizontal:"right"}}>
+            <Alert onClose={handleClose} severity={snackBar.type} sx={{ width: '100%' }}> {snackBar.message} </Alert>
+        </Snackbar>}
         </>
     )
 }
